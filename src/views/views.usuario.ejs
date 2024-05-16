@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HELLO BOYS</title>
+    <title>Registros de Usuarios</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
 </head>
 <body>
-    <h1>Las pacas vienen y van</h1>
-    
+       <h1><%= titulo  %></h1>
+       <h1>Registros de Usuarios</h1>
+    <div class="container">
+        <table border="5">
+          <thead>
+            <tr>
+              <th>ID Usuario</th>
+              <th>Identificación</th>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Contraseña</th>
+              <th>telefono</th>
+              <th>Opciones</th>
+            </tr>
+            <% data.forEach(function(registro){ %>
+                <tr>
+                  <td><%= registro.idusuario %></td>
+                  <td><%= registro.identificacion %></td>
+                  <td><%= registro.nombre %></td>
+                  <td><%= registro.correo %></td>
+                  <td><%= registro.contrasena %></td>
+                  <td><%= registro.telefono %></td>
+                  <td>
+                  <button class="modifique">Modificar</button>
+                  <button class="elimina" id="Elimina" onclick="EliminaRegistro(event)">Elimina</button>
+                  </td>
+                </tr>
+                <% }) %>
+                <script src="../public/js/login.js"></script>
+          </thead>
+          <tbody>
+            <!-- Aquí puedes añadir más filas según sea necesario -->
+          </tbody>
+        </table>
+      </div>
 </body>
 </html>
