@@ -57,15 +57,16 @@
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="./dash/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                <span class="hidden-xs">Cristian</span>
+                <img src="./img/icono.webp" class="user-image" alt="User Image">
+                <span class="hidden-xs"><%= datos.correo %></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- Menu Footer-->
                 <li class="user-footer">
 
                   <div class="pull-right">
-                    <a href="#" class="btn btn-danger btn-flat">Salir</a>
+                    <!-- <a href="#" class="btn btn-danger btn-flat">Salir</a> -->
+                    <button onclick="salirUsuario()" class="btn btn-danger btn-flat">Salir</button>
                   </div>
                 </li>
               </ul>
@@ -83,7 +84,7 @@
       <section class="sidebar">
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-          <li><a href="/dash"><i class="fa fa-user"></i> <span>Crear usuario</span></a></li>
+          <li><a href="/registrar"><i class="fa fa-user"></i> <span>Crear usuario</span></a></li>
           </li>
           <li><a href="/dash"><i class="fa fa-user"></i> <span>Mostrar usuario</span></a></li>
           </li>
