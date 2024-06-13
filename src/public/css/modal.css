@@ -1,0 +1,20 @@
+.modal-content {
+    background-color: purple; /* Color de fondo morado para el contenido del modal */
+}
+
+.modal-header {
+    background-color: purple; /* Color de fondo morado para el encabezado del modal */
+    color: white; /* Texto blanco en el encabezado del modal */
+}
+
+.modal-body {
+    background-color: purple; /* Color de fondo morado para el cuerpo del modal */
+}
+
+.modal-footer {
+    background-color: purple; /* Color de fondo morado para el pie del modal */
+}
+
+.modal-footer button {
+    color: white; /* Texto blanco en los botones del pie del modal */
+}

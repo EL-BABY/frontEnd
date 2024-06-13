@@ -3,16 +3,16 @@ import { config } from "dotenv";
 config();
 
 
-export const ListarUsuario = (req, res) =>{
+export const ListarProductos = (req, res) =>{
 
-    const url = process.env.URL_BACK + "/usuario";
+    const url = process.env.URL_BACK + "/productos";
 
     fetch(url)
     .then(respuesta=>respuesta.json())
     .then(data=>{
-        res.render("views.usuario.ejs",
+        res.render("views.productos.registro.ejs",
         {
-            "titulo":"",
+            "titulo":"Productos",
             "datos":data
         });
     })
@@ -22,8 +22,8 @@ export const ListarUsuario = (req, res) =>{
 
 // }
 
-export const registrarUsuario =(req, res) =>{
-    res.render("views.usuario.registro.ejs", {"datos":"madrid"});
+export const registrarProductos =(req, res) =>{
+    res.render("views.productos.ejs", {"datos":"madrid"});
 }
 
 
@@ -49,13 +49,3 @@ export const validarToken = (token) =>{
     })
     return respuesta;
 }
-export const salirUsuario = (req, res) =>{
-    res.redirect("/login.html");
-};
-
-export const inicioUsuario =(req, res) =>{
-    res.render("views.inicio.ejs", {"datos":"madrid"});
-};
-export const ayudaUsuario =(req, res) =>{
-    res.render("views.ayuda.ejs", {"datos":"madrid"});
-};

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda y Comentarios</title>
+  <link rel="stylesheet" href="./css/ayuda.css">
+</head>
+<%- include("partials/partials.dash.header.ejs", { datos : datos })  %>
+<body>
+  <div class="container">
+    <h1>Ayuda y Comentarios</h1>
+    <div class="help-section">
+      <h2>Ayuda</h2>
+      <p>Bienvenido al Apartado de Ayuda del Directorio de Proveedores<br>
+
+En el Directorio de Proveedores, nuestra misión es facilitar la búsqueda y conexión entre empresas y proveedores de servicios. Entendemos que navegar por un amplio espectro de <br> proveedores puede ser abrumador, por lo que hemos creado esta sección de ayuda para proporcionarte toda la información necesaria para aprovechar al máximo nuestra plataforma. <br>
+
+¿Qué puedes esperar de nuestra sección de ayuda?<br>
+<br>
+<b>Navegación Intuitiva:</b> Te guiaremos a través de las diversas secciones de nuestra plataforma, desde la búsqueda inicial hasta la selección final del proveedor adecuado para tus <br> necesidades. <br>
+<br>
+<b>Información Detallada:</b> Proporcionamos descripciones detalladas sobre las características de nuestra plataforma, cómo utilizarlas eficazmente y cómo maximizar tus oportunidades <br> de encontrar al proveedor perfecto. <br>
+<br>
+<b>Solución de Problemas:</b> En caso de enfrentar algún problema técnico o tener preguntas frecuentes, nuestro apartado de ayuda está diseñado para ofrecerte soluciones rápidas y eficientes. <br>
+<br>
+<b>Atención Personalizada:</b> Siempre estamos aquí para ayudarte. Si no encuentras la respuesta que buscas, no dudes en ponerte en contacto con nuestro equipo de soporte, <br> quienes estarán encantados de asistirte en todo lo que necesites. <br>
+<br>
+Explora Nuestros Recursos
+
+Guía de Uso: Aprende a utilizar todas las funciones de nuestra plataforma para optimizar tu experiencia de búsqueda.
+Preguntas Frecuentes (FAQ): Encuentra respuestas a las preguntas más comunes que nuestros usuarios suelen plantear.
+Contáctanos: ¿Necesitas ayuda personalizada? ¡No dudes en ponerte en contacto con nuestro equipo de soporte dedicado!
+En el Directorio de Proveedores, nuestra prioridad es ofrecerte una experiencia fluida y satisfactoria. Esperamos que esta sección de ayuda te proporcione <br> toda la asistencia que necesitas para encontrar a los proveedores ideales para tu empresa. <br>
+<br>
+para una mejor experiencia con nuestra pagina ¡Supplier te invitamos a visitar nuestro video para que asi tengas una mejor navegacion en la pagina <br>
+<a href="https://www.youtube.com/watch?v=h8ZzrLkeBaE" target="_blank"><br>
+  Ver video en YouTube</a>
+<br><br>
+<b>¡Gracias por elegirnos como tu plataforma de referencia para conectar con proveedores confiables y de calidad! </b></p>
+      <!-- Aquí puedes agregar más contenido de ayuda -->
+    </div>
+
+    
+    <div class="comments-section">
+      <div id="calificar">
+        <h2>Calificar esta página:</h2>
+        <div class="estrellas">
+          <span class="estrella" data-valor="1">★</span>
+          <span class="estrella" data-valor="2">★</span>
+          <span class="estrella" data-valor="3">★</span>
+          <span class="estrella" data-valor="4">★</span>
+          <span class="estrella" data-valor="5">★</span>
+        </div>
+        <p id="respuesta"></p>
+      </div>
+      <h2>Comentarios</h2>
+      <div class="comment">
+        <p class="comment-text"></p>
+        <p class="comment-author">proveedor</p>
+        <div>
+        <label for="text-default">Ayudanos a mejorar este servicio</label>
+        <input type="text" class="form-control" id="productos" placeholder="Comenta"><br>
+        <button>enviar</button>
+      </div>
+      </div>
+      <!-- Aquí puedes agregar más comentarios -->
+    </div>
+  </div>
+  <%- include("partials/partials.dash.footer.ejs")  %>
+</body>
+</html>

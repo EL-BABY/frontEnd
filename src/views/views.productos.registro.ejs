@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Usuarios</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+</head>
+<body> 
+   <%- include("partials/partials.dash.header.ejs", { datos : datos })  %>
+  <h1><%= titulo  %></h1>
+       <h1></h1>
+    <div class="container">
+        <table border="5">
+          <thead>
+            <tr>
+                <th>ID Productos</th>
+                <th>productos</th>
+                <th>descripcion</th>
+                <th>precio</th>
+                <th>Opciones</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% datos.forEach(function(registro){ %>
+                <tr>
+                    <td><%= registro.idproductos %></td>
+                    <td><%= registro.productos %></td>
+                    <td><%= registro.descripcion %></td>
+                    <td><%= registro.precio %></td>
+
+                    <td>
+                        <button class="btn bg-black"
+                        data-toggle="modal"
+                        data-target="#modal-warning"
+                        onclick="CargarProductos(event)";
+                        >Modificar</button>
+                      </button>
+
+                        <button class="btn bg-black" id="Elimina" onclick="EliminaProducto(event)">Elimina</button>
+
+
+                    </td>
+                </tr>
+            <% }); %>
+            <link rel="stylesheet" href="./css/modal.css">
+            <div class=" modal modal-warning fade" id="modal-warning">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class=" modal-title">Modifica solo tus datos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- //columna 1 -->
+                                    <div class="form-group">
+                                        <label for="number">idproductos</label>
+                                        <input type="number" class="form-control" id="idproductos" placeholder="idproductos">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">productos</label>
+                                        <input type="text" class="form-control" id="productos" placeholder="productos">
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <label for="password">descripcion</label>
+                                        <input type="password" class="form-control" id="contrasena" placeholder="Password">
+                                    </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- //columna 2 // -->
+                                    <div class="form-group">
+                                        <label for="text-default">precio</label>
+                                        <input type="text" class="form-control" id="precio" placeholder="precio">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">descripcion</label>
+                                        <input type="text" class="form-control" id="descripcion" placeholder="descripcion">
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <label for="password">Confirmar Clave</label>
+                                        <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter password">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-outline" onclick="validarCorreo(); ModificarProductos()">Guardar</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        </tbody>
+            </table>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          </div>
+          <%- include("partials/partials.dash.footer.ejs")  %>
+ </body>
+</html> 

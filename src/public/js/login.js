@@ -6,14 +6,14 @@ const logueese = () => {
     let option = {
         "method": "POST",
         headers: {
-            "Content-type": "application/json",
+            "Content-type": "application/json"
         },
         "body": JSON.stringify({
             "correo":correo.value,
             "contrasena": contrasena.value
         })
     }
-    let url = "http://localhost:20000/api/login";
+    let url = "https://backend-supplier.onrender.com/api/login";
 
     fetch(url, option)
     .then(res => res.json())
@@ -26,4 +26,16 @@ const logueese = () => {
         }
     })
     .catch(error => console.log(error.message))
+
 };
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
